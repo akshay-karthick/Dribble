@@ -1,5 +1,5 @@
 # Project Responsive Web Design using Bootstrap
-## Date:22/12/2024
+## Date:23/12/2024
 
 ## AIM:
 To create a simplified clone of Dribbble (https://dribbble.com/) landing page.
@@ -33,13 +33,20 @@ HTML CODE
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dribbble Clone</title>
-
+  <title>Dribbble</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    .shot-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .shot-card:hover {
+      transform: scale(1.02);
+      transition: transform 0.2s ease;
+    }
+  </style>
 </head>
 <body>
- 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#" title="Dribbble: the community for graphic design">
@@ -56,8 +63,7 @@ HTML CODE
           <li class="nav-item"><a class="nav-link" href="#">Shots</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Designers</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#">Sign Up</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-brand text-white" href="#">Sign in</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#">Sign In</a></li>
           <form class="d-flex me-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light" type="submit">Search</button>
@@ -67,135 +73,101 @@ HTML CODE
     </div>
   </nav>
 
-  <section class="text-center py-5" style="background-color: darkgray;">
-    <div class="container">
-      <h1 class="display-5">Need some top-class designs?</h1>
-      <p class="lead">Dribbble is an oppurtunity to find your ideas.</p>
-      <a href="#" class="btn btn-primary me-2">Log in</a>
-      <a href="#" class="btn btn-outline-brand">Sign Up</a>
-    </div>
-  </section>
-
-  <section class="py-5">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-        <div class="col">
-          <div class="card">
-            <img src="1.webp" class="card-img-top" alt="Design">
-            <div class="card-body">
-              <p class="card-text">Soft-Drink Can Design</p>
-            </div>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="1.webp" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Soft Drink Tin Designing</h5>
+            <p class="card-text">Albert Smich</p>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card">
-            <img src="2.jpeg" class="card-img-top" alt="Design">
-            <div class="card-body">
-              <p class="card-text">AI Home Decor</p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="2.jpeg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Mobile Overview UI</h5>
+            <p class="card-text">Robertdz</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img src="3.jpg" class="card-img-top" alt="Design">
-            <div class="card-body">
-              <p class="card-text">Notebook design</p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="3.jpg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Notebook designing</h5>
+            <p class="card-text">Alorastinson</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img src="4.jpg" class="card-img-top" alt="Design">
-            <div class="card-body">
-              <p class="card-text">Android OS Design</p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="4.jpg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Custom OS UI</h5>
+            <p class="card-text">Dev56</p>
           </div>
         </div>
-        <div class="row-cols-1">
-            <div class="card">
-              <img src="5.jpg" class="card-img-top" alt="Design">
-              <div class="card-body">
-                <p class="card-text">Flight Booking App Interface</p>
-              </div>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="5.jpg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Flight Booking Software</h5>
+            <p class="card-text">Henderson</p>
           </div>
-          <div class="row-cols-1">
-            <div class="card">
-              <img src="6.jpg" class="card-img-top" alt="Design">
-              <div class="card-body">
-                <p class="card-text">Company Logo Design</p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="6.jpg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Company Logo Design</h5>
+            <p class="card-text">Feeble Kompany</p>
           </div>
-          <div class="col">
-            <div class="card">
-              <img src="7.jpg" class="card-img-top" alt="Design">
-              <div class="card-body">
-                <p class="card-text">Crypto Web Design</p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="7.jpg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Neon OS Custom Designing</h5>
+            <p class="card-text">John Cook</p>
           </div>
-          <div class="col">
-            <div class="card">
-              <img src="8.jpg" class="card-img-top" alt="Design">
-              <div class="card-body">
-                <p class="card-text">AI Shopping</p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="8.jpg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Online Shopping WebDesign</h5>
+            <p class="card-text">Swetha</p>
           </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shot-card">
+          <img src="9.jpg" class="card-img-top" alt="Shot">
+          <div class="card-body">
+            <h5 class="card-title">Aligned Parking and Renting Softw</h5>
+            <p class="card-text">Sangeetha</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <footer id="footer">
-    <h2 style="background-color: rgb(0, 0, 0);-webkit-text-fill-color: azure; text-align: center; font-size: 18px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Designed and developed by Akshay Karthick ASR</h2>
-</footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+  <footer>
+    <h2 style="background-color: rgb(26, 54, 53);-webkit-text-fill-color: rgb(255, 255, 255); text-align: center; font-size: 18px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Designed and developed by Akshay Karthick ASR</h2>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 ```
 
-CSS CODE
-```
-body {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;
-}
-
-.card-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.card {
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-  transform: scale(1.02);
-  transition: all 0.3s ease-in-out;
-}
-
-.container {
-  max-width: 1200px;
-}
-
-.footer {
-  font-size: 12px;
-
-}
-
-```
-
 ## OUTPUT:
-![alt text](<Screenshot (66).png>)
-![alt text](<Screenshot (67).png>)
+![alt text](<Screenshot (70).png>)
+![alt text](<Screenshot (71).png>)
 ## RESULT:
 The Project for responsive web design using Bootstrap is completed successfully.
